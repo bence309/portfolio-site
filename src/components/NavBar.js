@@ -16,10 +16,18 @@ function NavBar() {
                 setScrolled(false)
             }
         }
+
+        window.addEventListener("scrolL", onScroll);
+
+        return () => window.removeEventListener("scroll", onScroll);
     }, [])
 
+    const onUpdateActiveLink = (value) => {
+        setActiveLink(value);
+    }
+
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
       <Container>
         <Navbar.Brand href="#home">
             <img src={''} alt="Logo" />
@@ -28,9 +36,9 @@ function NavBar() {
           <span className="navbar-toggler-icon"></span>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Skills</Nav.Link>
-            <Nav.Link href="#link">Projects</Nav.Link>
+            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+            <Nav.Link href="#link" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
+            <Nav.Link href="#link" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div classname="social-icon">
