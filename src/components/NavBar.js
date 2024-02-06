@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+// Import HashLink for smooth scrolling within the same page
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -50,10 +49,12 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
+                {/* Update the href attribute with your LinkedIn profile URL */}
+                <a href="https://www.linkedin.com/in/bence-b%C3%B3di-862ba6236/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="" /></a>
                 {/* <a href="#"><img src={navIcon2} alt="" /></a>
                 <a href="#"><img src={navIcon3} alt="" /></a> */}
               </div>
+              {/* Use HashLink to smoothly scroll to the specified section */}
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
               </HashLink>
