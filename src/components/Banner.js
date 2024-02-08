@@ -6,12 +6,13 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
   const period = 2000;
 
   useEffect(() => {
@@ -47,27 +48,30 @@ export const Banner = () => {
     }
   }
 
+  const handleVisibilityChange = (isVisible) => {
+    setIsVisible(isVisible);
+  };
+
   return (
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h1>{`Hi! My name is Bence Bódi`} </h1>
-                <span className="tagline">Welcome to my Portfolio</span>
-                  <p>I'm a full-stack developer student at Codecool and I'm also specialized there as a DevOps engineer. Please check out my skills, projects and feel free to contact me. </p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-              </div>}
-            </TrackVisibility>
+            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+              <h1>{`Hi! My name is Bence Bódi`} </h1>
+              <span className="tagline">Welcome to my Portfolio</span>
+              <p>I'm a full-stack developer student at Codecool and I'm also specialized there as a DevOps engineer. Please check out my skills, projects and feel free to contact me. </p>
+              <button className="connect-button" onClick={() => window.location.href = "#connect"}>
+                Let’s Connect <ArrowRightCircle size={25} />
+              </button>
+
+            </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img" style={{ borderRadius: '15px' }} />
-                </div>}
+            <TrackVisibility onChange={handleVisibilityChange}>
+              <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                <img src={headerImg} alt="Header Img" style={{ borderRadius: '15px' }} />
+              </div>
             </TrackVisibility>
           </Col>
         </Row>
@@ -75,4 +79,5 @@ export const Banner = () => {
     </section>
   )
 }
+
 

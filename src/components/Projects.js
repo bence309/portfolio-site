@@ -41,10 +41,21 @@ export const Projects = () => {
                         <p>DockerHub link: bence309/bence309-petproject</p>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                        <p>
+                          This is a fast food ordering full-stack web application, where the user can choose between many types of foods and drinks. GitHub Link: <a href="https://github.com/bence309/restaurant-petproject">https://github.com/bence309/restaurant-petproject</a>
+                        </p>
+                        <p>
+                          The user can register and sign in to the app. It has a MongoDB connection for the registrations,
+                          also it has a dark/light mode toggle and many more features like a "menu" page, where the app
+                          randomly gives the user foods with lowered prices.
+                        </p>
+                        <p>
+                          Stack: React, JavaScript, Express, Node.js, MongoDB, CSS, HTML
+                        </p>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                        <p>This is actually this site. Plans for the future: Selenium testing, Monitoring with Grafana/Prometheus, CI/CD pipeline with Jenkins, Dockerization and so on.</p>
+                        <p>GitHub Link: <a href="https://github.com/bence309/portfolio-site">https://github.com/bence309/portfolio-site</a></p>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
