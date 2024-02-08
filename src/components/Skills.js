@@ -6,6 +6,17 @@ import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import aws from "../assets/img/AWS.png"
+import docker from "../assets/img/docker.svg"
+import linux from "../assets/img/Linux.svg.png"
+import kubernetes from "../assets/img/Kubernetes.png"
+import terraform from "../assets/img/terraform.svg"
+import react from "../assets/img/React.svg.png"
+import node from "../assets/img/Node.svg.png"
+import python from "../assets/img/Python.svg.png"
+import mongodb from "../assets/img/mongodb.svg"
+import postgres from "../assets/img/postgres.svg.png"
+import c4 from "../assets/img/c4.svg"
 
 export const Skills = () => {
   const responsive = {
@@ -38,47 +49,47 @@ export const Skills = () => {
                         <p>These are the technologies, languages and skills I learned at Codecool or experienced by my pet projects:</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={aws} alt="Image" />
                                 <h5>AWS</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={docker} alt="Image" />
                                 <h5>Docker</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={linux} alt="Image" />
                                 <h5>Linux</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={kubernetes} alt="Image" />
                                 <h5>Kubernetes</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={terraform} alt="Image" />
                                 <h5>Terraform</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={react} alt="Image" />
                                 <h5>React</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={node} alt="Image" />
                                 <h5>Node</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={python} alt="Image" />
                                 <h5>Python</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={mongodb} alt="Image" />
                                 <h5>MongoDB</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={postgres} alt="Image" />
                                 <h5>PostgreSQL</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={c4} alt="Image" />
                                 <h5>C#</h5>
                             </div>
                         </Carousel>
