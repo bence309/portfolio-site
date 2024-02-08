@@ -1,10 +1,10 @@
+"use strict";
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 require('dotenv').config();
 
-// server used to send send emails
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -13,41 +13,48 @@ app.listen(5000, () => console.log("Server Running"));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
-const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
+// create reusable transporter object using the default SMTP transport
+const transporter = nodemailer.createTransport({
+  host: "smtp.forwardemail.net",
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
   },
 });
 
-contactEmail.verify((error) => {
+// verify connection configuration
+transporter.verify(function(error, success) {
   if (error) {
     console.log(error);
   } else {
-    console.log("Ready to Send");
+    console.log("Server is ready to take our messages");
   }
 });
 
-router.post("/contact", (req, res) => {
+router.post("/contact", async (req, res) => {
   const name = req.body.firstName + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
-  const mail = {
-    from: email,
-    to: "bodibencezsolt@gmail.com",
-    subject: "Contact Form Submission - Portfolio",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>
-           <p>Message: ${message}</p>`,
-  };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json(error);
-    } else {
-      res.json({ code: 200, status: "Message Sent" });
-    }
-  });
+
+  try {
+    // send mail with defined transport object
+    const info = await transporter.sendMail({
+      from: `"Portfolio Contact Form" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
+      subject: "Contact Form Submission - Portfolio",
+      html: `<p>Name: ${name}</p>
+             <p>Email: ${email}</p>
+             <p>Phone: ${phone}</p>
+             <p>Message: ${message}</p>`,
+    });
+    
+    console.log("Message sent: %s", info.messageId);
+    res.json({ code: 200, status: "Message Sent" });
+  } catch (error) {
+    console.error(error);
+    res.json({ code: 500, status: "Error occurred while sending message" });
+  }
 });
