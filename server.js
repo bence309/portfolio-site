@@ -13,7 +13,6 @@ app.listen(5000, () => console.log("Server Running"));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
-// create reusable transporter object using the default SMTP transport
 const transporter = nodemailer.createTransport({
   host: "smtp.forwardemail.net",
   port: 465,
@@ -24,7 +23,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// verify connection configuration
 transporter.verify(function(error, success) {
   if (error) {
     console.log(error);
@@ -40,7 +38,6 @@ router.post("/contact", async (req, res) => {
   const phone = req.body.phone;
 
   try {
-    // send mail with defined transport object
     const info = await transporter.sendMail({
       from: `"Portfolio Contact Form" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
