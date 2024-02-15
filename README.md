@@ -1,5 +1,7 @@
 Bence Bódi Portfolio Site
+
 Project Overview
+
 This project is a personal portfolio website showcasing my projects and skills as a software developer. The website is divided into four main sections:
 
 About Me: A very brief indrudoction about me with a photo of myself.
