@@ -1,5 +1,11 @@
 Bence Bódi Portfolio Site
 
+The site is currentcly deployed on a publicy accessible AWS S3 bucket, you can check it out in this link:
+
+http://bence-bodi-portfolio.s3-website.eu-north-1.amazonaws.com
+
+
+
 Project Overview
 
 This project is a personal portfolio website showcasing my projects and skills as a software developer. The website is divided into four main sections:
