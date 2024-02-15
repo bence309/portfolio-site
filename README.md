@@ -1,36 +1,44 @@
-# Personal Portfolio Website in React
+Bence Bódi Portfolio Site
+Project Overview
+This project is a personal portfolio website showcasing my projects and skills as a software developer. The website is divided into four main sections:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+About Me: A very brief indrudoction about me with a photo of myself.
 
-<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="https://user-images.githubusercontent.com/50160672/174933373-1ba6cadf-1c9a-48c3-aa58-984d0bd62d82.png">
+Skills: List of technologies, programming languages, frameworks, and other skills.
 
-Built using:
+Projects: Showcase of three featured projects by me. Each project includes detailed descriptions and accessibility links, the tech stack is also included.
 
-- Front-end library: React
-- CSS framework: React-bootstrap
-- CSS animations library: Animate.css
+Contact: The user can send me e-mail message through the site (not completely working yet)
 
-In the /personal-portfolio, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Technology Stack
+Frontend: The frontend of the project is built on the React framework, written in JavaScript. Responsive design is implemented using the Bootstrap framework.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Backend: The backend part is developed using Express.js and Node.js environment.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Installation Guide
+Clone the GitHub repository to your local machine:
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+git clone https://github.com/bence309/portfolio-site
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Navigate to the project root directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+cd portfolio-site
+
+Install project dependencies with the following command:
+
+npm install
+
+Start the project in development mode:
+
+npm start
+
+
+After the project starts, it will open in your browser at http://localhost:3000.
+
+If you find any bugs or would like to contribute suggestions to the project, feel free to create a new branch (git checkout -b feature/MyFeature) and submit a pull request.
+
+Thank you for your interest in the project!
