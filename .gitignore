@@ -24,3 +24,9 @@ yarn-error.log*
 
 # environment variables
 .env
+
+
+/terraform/terraform.tfstate
+/terraform/terraform.tfstate.backup
+/terraform/terraform.lock.hcl
+/terraform/.terraform
