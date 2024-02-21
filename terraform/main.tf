@@ -17,7 +17,7 @@ resource "aws_s3_bucket" "portfolio_bucket" {
 
 resource "aws_s3_bucket_object" "portfolio_website_files" {
   bucket = aws_s3_bucket.portfolio_bucket.bucket
-  key    = "build/"
+  key    = "build"  # Remove the trailing slash to upload only the contents
   for_each = fileset("../build", "**/*")
 
   source = "../build/${each.value}"
