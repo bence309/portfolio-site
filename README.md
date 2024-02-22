@@ -49,4 +49,6 @@ After the project starts, it will open in your browser at http://localhost:3000.
 
 If you find any bugs or would like to contribute suggestions to the project, feel free to create a new branch (git checkout -b feature/MyFeature) and submit a pull request.
 
+The app is Dockerized, it is avalaible at bence309/portfolio-site
+
 Thank you for your interest in the project!
