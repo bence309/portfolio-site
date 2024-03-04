@@ -61,9 +61,10 @@ export const Banner = () => {
               <h1>{`Hi! My name is Bence Bódi`} </h1>
               <span className="tagline">Welcome to my Portfolio</span>
               <p>I'm a full-stack developer student at Codecool and I'm also specialized there as a DevOps engineer. Please check out my skills, projects and feel free to contact me. </p>
-              <button className="connect-button" onClick={() => window.location.href = "#connect"}>
-                Let’s Connect <ArrowRightCircle size={25} />
-              </button>
+              <button className="connect-button" onClick={() => window.open("https://www.linkedin.com/in/bence-bodi", "_blank")}>
+  Let’s connect on LinkedIn <ArrowRightCircle size={25} />
+</button>
+
 
             </div>
           </Col>

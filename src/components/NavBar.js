@@ -46,7 +46,7 @@ export const NavBar = () => {
             <span className="navbar-text">
               <div className="social-icon">
                 {/* Update the href attribute with your LinkedIn profile URL */}
-                <a href="https://www.linkedin.com/in/bence-b%C3%B3di-862ba6236/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="" /></a>
+                <a href="https://www.linkedin.com/in/bence-bodi/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="" /></a>
                 {/* <a href="#"><img src={navIcon2} alt="" /></a>
                 <a href="#"><img src={navIcon3} alt="" /></a> */}
               </div>
